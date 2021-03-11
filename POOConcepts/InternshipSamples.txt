@@ -1,0 +1,60 @@
+﻿////Inheritance
+//var test1= new Tester();
+
+// var tester2 = new Tester(1);
+
+// var tester3 = new Tester("Tester");
+
+////CAST
+
+//var tester4 = new Tester();
+//var employee0 = (Employee)tester4;
+//Employee employee1 = tester4;
+
+//Tester tester6 = new Tester();
+//LogEmployee(tester6);
+
+//var employee2 = new Employee();
+//var tester5 = (Tester)employee2;
+
+////Abstract classes
+//IList<Employee> employees = new List<Employee>();
+//employees.Add(new Employee());
+//employees.Add(new Tester());
+//employees.Add(new ManualTester());
+//employees.Add(new Developer());
+
+
+////Interfaces
+//IBillableEmployee -> do Work
+
+//Polymorphism 
+
+
+//var dev = new Developer();
+//dev.LogTime(1);
+//dev.LogTime();
+
+//IList<Employee> employees = new List<Employee>();
+//employees.Add(new ManualTester());
+//employees.Add(new Developer());
+
+Employee bc = new Employee();
+Developer dc = new Developer();
+Employee bcdc = new Developer();
+
+bc.LogMethod();
+dc.LogMethod();
+bcdc.LogMethod();
+
+}
+
+//safely cast
+public static void LogEmployee(Employee employee)
+{
+employee.LogMethod();
+
+if (employee is Tester) Console.WriteLine($"this employee is a tester {(employee as Tester).TesterKey}");
+if (employee is Developer)
+    Console.WriteLine($"this employee is a tester {(employee as Developer).DeveloperKey}");
+}
